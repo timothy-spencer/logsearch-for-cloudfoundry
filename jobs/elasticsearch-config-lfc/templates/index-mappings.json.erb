@@ -12,7 +12,7 @@ require 'json'
 string_default = { "type": "keyword", "index": true }.to_json
 
 full_text_with_raw_copy = {
-  "type": "string",
+  "type": "text",
   "index": "analyzed",
   "norms": false,
   "fields": {
