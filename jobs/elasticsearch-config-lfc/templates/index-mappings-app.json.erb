@@ -15,9 +15,11 @@ string_default = { "type": "keyword", "index": true }.to_json
     <%# ------------ App specific types %>
     "applogs": {
       "properties": {
-        "type": "keyword",
+        "type": {
+          "type": keyword"
+        },
         "LogMessage": {
-          "type": "LogMessage",
+          "type": "text",
           "@cf": {
             "type": "object",
             "dynamic": true,
@@ -94,7 +96,7 @@ string_default = { "type": "keyword", "index": true }.to_json
         },
 
         "ContainerMetric": {
-          "type": "ContainerMetric",
+          "type": "keyword",
           "@cf": {
             "type": "object",
             "dynamic": true,
@@ -122,7 +124,7 @@ string_default = { "type": "keyword", "index": true }.to_json
         },
 
         "ValueMetric": {
-          "type": "ValueMetric",
+          "type": "keyword",
           "valuemetric": {
             "type": "object",
             "dynamic": true,
@@ -135,7 +137,7 @@ string_default = { "type": "keyword", "index": true }.to_json
         },
 
         "CounterEvent": {
-          "type": "CounterEvent",
+          "type": "keyword",
           "counterevent": {
             "type": "object",
             "dynamic": true,
@@ -160,7 +162,7 @@ string_default = { "type": "keyword", "index": true }.to_json
         },
 
         "HttpStartStop": {
-          "type": "HttpStartStop",
+          "type": "keyword",
           "@cf": {
             "type": "object",
             "dynamic": true,
